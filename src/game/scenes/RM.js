@@ -4,6 +4,7 @@ import { Scene } from 'phaser';
 export class RM extends Scene {
     f_layer;
     f_logo; f_btn; f_cta; f_ctaText;
+    f_coins; f_radial;
 
     constructor() {
         super('RM');
@@ -22,12 +23,15 @@ export class RM extends Scene {
             align: 'center'
         }).setOrigin(0.5).setDepth(100);
 
-        this.f_cta = this.add.container(320, 869, [this.f_btn, this.f_ctaText]);
+        this.f_cta = this.add.container(320, 719, [this.f_btn, this.f_ctaText]).setDepth(100);
 
         this.f_cta.setInteractive(this.f_btn.getBounds().setPosition(-this.f_btn.width / 2, -this.f_btn.height / 2), Phaser.Geom.Rectangle.Contains);
         this.f_logo.setInteractive();
         this.f_cta.on('pointerdown', () => this.redirect(this.f_cta));
         this.f_logo.on('pointerdown', () => this.redirect());
+
+        this.f_coins = this.add.image(320, 1069, 'coins_rm');
+        this.f_radial = this.add.image(320, 719, 'radial').setScale(2).setAlpha(0.5);
 
         EventBus.emit('current-scene-ready', this);
 

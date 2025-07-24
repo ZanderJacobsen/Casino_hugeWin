@@ -1,0 +1,108 @@
+{"frames": [
+
+{
+	"filename": "Pink_Square__0000_Square-Sparkles11.png",
+	"frame": {"x":475,"y":1,"w":154,"h":130},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":33,"w":154,"h":130},
+	"sourceSize": {"w":200,"h":200}
+},
+{
+	"filename": "Pink_Square__0001_Square-Sparkles10.png",
+	"frame": {"x":319,"y":1,"w":154,"h":130},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":33,"w":154,"h":130},
+	"sourceSize": {"w":200,"h":200}
+},
+{
+	"filename": "Pink_Square__0002_Square-Sparkles09.png",
+	"frame": {"x":475,"y":133,"w":154,"h":130},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":33,"w":154,"h":130},
+	"sourceSize": {"w":200,"h":200}
+},
+{
+	"filename": "Pink_Square__0003_Square-Sparkles08.png",
+	"frame": {"x":1,"y":270,"w":155,"h":131},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":33,"w":155,"h":131},
+	"sourceSize": {"w":200,"h":200}
+},
+{
+	"filename": "Pink_Square__0004_Square-Sparkles07.png",
+	"frame": {"x":158,"y":270,"w":155,"h":131},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":33,"w":155,"h":131},
+	"sourceSize": {"w":200,"h":200}
+},
+{
+	"filename": "Pink_Square__0005_Square-Sparkles06.png",
+	"frame": {"x":318,"y":135,"w":155,"h":132},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":32,"w":155,"h":132},
+	"sourceSize": {"w":200,"h":200}
+},
+{
+	"filename": "Pink_Square__0006_Square-Sparkles05.png",
+	"frame": {"x":160,"y":135,"w":156,"h":132},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":32,"w":156,"h":132},
+	"sourceSize": {"w":200,"h":200}
+},
+{
+	"filename": "Pink_Square__0007_Square-Sparkles04.png",
+	"frame": {"x":315,"y":269,"w":156,"h":132},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":32,"w":156,"h":132},
+	"sourceSize": {"w":200,"h":200}
+},
+{
+	"filename": "Pink_Square__0008_Square-Sparkles03.png",
+	"frame": {"x":1,"y":136,"w":157,"h":132},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":32,"w":157,"h":132},
+	"sourceSize": {"w":200,"h":200}
+},
+{
+	"filename": "Pink_Square__0009_Square-Sparkles02.png",
+	"frame": {"x":1,"y":1,"w":157,"h":133},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":32,"w":157,"h":133},
+	"sourceSize": {"w":200,"h":200}
+},
+{
+	"filename": "Pink_Square__0010_Square-Sparkles01.png",
+	"frame": {"x":160,"y":1,"w":157,"h":132},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":32,"w":157,"h":132},
+	"sourceSize": {"w":200,"h":200}
+},
+{
+	"filename": "Pink_Square__0011_Square-Sparkles00.png",
+	"frame": {"x":475,"y":265,"w":153,"h":130},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":25,"y":33,"w":153,"h":130},
+	"sourceSize": {"w":200,"h":200}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "Pink_Square.png",
+	"format": "RGBA8888",
+	"size": {"w":630,"h":402},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:70b823161cf67813d67edf9a09f6cea0:f56984aa6873ad3f4e9b8a6a5f608696:00b3e78549f443af17a8ca29b345f3ac$"
+}
+}

@@ -2,9 +2,10 @@ import { EventBus } from '../EventBus';
 import { Scene } from 'phaser';
 
 export class UI extends Scene {
-    logoTween;
     f_DL; f_icon;
-    f_layer;
+    f_meter; f_spin;
+    f_attaCoins; f_attaboys;
+    f_attaRadial; f_youWin; f_jackpot;
 
     constructor() {
         super('UI');
@@ -12,17 +13,9 @@ export class UI extends Scene {
     }
 
     create() {
-        this.f_layer = this.add.image(320, 569, 'background').alpha = 0.25;
-
-        this.f_icon = this.add.image(65, 65, 'debugBtn').setDepth(100);
-        this.f_DL = this.add.image(565, 1073, 'debugBtn').setDepth(100);
+        this.f_icon = this.add.image(65, 65, 'debugBtn').setDepth(100).setScale(0);
+        this.f_DL = this.add.image(565, 1073, 'debugBtn').setDepth(100).setScale(0);
         // console.log(this.f_DL)
-
-        let name = this.add.text(320, 460, 'UI', {
-            fontFamily: 'Arial Black', fontSize: 38, color: '#ffffff',
-            stroke: '#000000', strokeThickness: 8,
-            align: 'center'
-        }).setDepth(100).setOrigin(0.5);
 
         this.scene.run('Game');
 
@@ -30,6 +23,13 @@ export class UI extends Scene {
         this.f_DL.setInteractive();
         this.f_DL.on('pointerdown', () => this.redirect(this.f_DL));
         this.f_icon.on('pointerdown', () => this.redirect(this.f_icon));
+
+        this.f_attaRadial = this.add.image(0, 0, 'radial').setAlpha(0.5);
+        this.f_youWin = this.add.image(0, 0, 'attaboy_1').setAlpha(0);
+        this.f_jackpot = this.add.image(0, 0, 'attaboy_2').setAlpha(0);
+
+        this.f_attaCoins = this.add.container(320, 569).setDepth(100);
+        this.f_attaboys = this.add.container(320, 569, [this.f_attaRadial, this.f_youWin, this.f_jackpot]).setScale(0).setDepth(100);
 
         EventBus.emit('current-scene-ready', this);
     }
