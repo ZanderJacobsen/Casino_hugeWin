@@ -41,14 +41,16 @@
       "url": "assets/01_Art/moneypile_portrait.png"
     },
     {
-      "type": "image",
+      "type": "atlas",
       "key": "Pink_Rectangle",
-      "url": "assets/01_Art/slots/Atlas/Pink_Rectangle.png"
+      "textureURL": "assets/01_Art/slots/Atlas/Pink_Rectangle.png",
+      "atlasURL": "assets/01_Art/slots/Atlas/Pink_Rectangle.json"
     },
     {
-      "type": "image",
+      "type": "atlas",
       "key": "Pink_Square",
-      "url": "assets/01_Art/slots/Atlas/Pink_Square.png"
+      "textureURL": "assets/01_Art/slots/Atlas/Pink_Square.png",
+      "atlasURL": "assets/01_Art/slots/Atlas/Pink_Square.json"
     },
     {
       "type": "image",

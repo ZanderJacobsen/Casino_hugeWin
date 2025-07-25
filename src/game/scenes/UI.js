@@ -1,5 +1,7 @@
 import { EventBus } from '../EventBus';
 import { Scene } from 'phaser';
+import { CTA } from '../prefabs/CTA'
+import { MoneyMeter } from '../prefabs/MoneyMeter'
 
 export class UI extends Scene {
     f_DL; f_icon;
@@ -23,6 +25,10 @@ export class UI extends Scene {
         this.f_DL.setInteractive();
         this.f_DL.on('pointerdown', () => this.redirect(this.f_DL));
         this.f_icon.on('pointerdown', () => this.redirect(this.f_icon));
+
+        this.f_meter = new MoneyMeter(this, 320, 75);
+        this.f_spin = new CTA(this, 320, 919);
+        this.f_spin.enableBtn();
 
         this.f_attaRadial = this.add.image(0, 0, 'radial').setAlpha(0.5);
         this.f_youWin = this.add.image(0, 0, 'attaboy_1').setAlpha(0);

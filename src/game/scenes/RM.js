@@ -1,9 +1,10 @@
 import { EventBus } from '../EventBus';
 import { Scene } from 'phaser';
+import { CTA } from '../prefabs/CTA'
 
 export class RM extends Scene {
-    f_layer;
-    f_logo; f_btn; f_cta; f_ctaText;
+    f_bg;
+    f_logo; f_wrapper; f_cta; f_text;
     f_coins; f_radial;
 
     constructor() {
@@ -11,32 +12,31 @@ export class RM extends Scene {
     }
 
     create() {
-        this.cameras.main.setBackgroundColor(0x330000);
+        // this.cameras.main.setBackgroundColor(0x330000);
 
-        this.f_layer = this.add.image(320, 569, 'background');
+        this.f_bg = this.add.image(320, 569, 'background_portrait');
 
-        this.f_logo = this.add.image(320, 469, 'logo').setDepth(100);
-        this.f_btn = this.add.image(0, 0, 'debugBtn');
-        this.f_ctaText = this.add.text(0, 0, 'DOWNLOAD', {
-            fontFamily: 'Arial Black', fontSize: 20, color: '#ffffff',
-            stroke: '#000000', strokeThickness: 8,
+        this.f_logo = this.add.image(320, 319, 'logo').setDepth(100);
+        this.f_text = this.add.text(320, 539, 'REAL WINNERS!', {
+            fontFamily: 'Arial Black', fontSize: 50, color: '#ffffff',
+            stroke: '#0080c0', strokeThickness: 12,
             align: 'center'
         }).setOrigin(0.5).setDepth(100);
 
-        this.f_cta = this.add.container(320, 719, [this.f_btn, this.f_ctaText]).setDepth(100);
+        this.f_cta = new CTA(this, 0, 0);
 
-        this.f_cta.setInteractive(this.f_btn.getBounds().setPosition(-this.f_btn.width / 2, -this.f_btn.height / 2), Phaser.Geom.Rectangle.Contains);
         this.f_logo.setInteractive();
-        this.f_cta.on('pointerdown', () => this.redirect(this.f_cta));
         this.f_logo.on('pointerdown', () => this.redirect());
 
         this.f_coins = this.add.image(320, 1069, 'coins_rm');
-        this.f_radial = this.add.image(320, 719, 'radial').setScale(2).setAlpha(0.5);
+        this.f_radial = this.add.image(0, 0, 'radial').setScale(2).setAlpha(0.5);
+
+        this.f_wrapper = this.add.container(320, 719, [this.f_radial, this.f_cta]).setDepth(100);
 
         EventBus.emit('current-scene-ready', this);
 
-        this.events.emit('setMode', this.f_cta, 1);
-        this.events.emit('queueHand', 0, 200, 300);
+        // this.events.emit('setMode', this.f_cta, 1);
+        // this.events.emit('queueHand', 0, 200, 300);
     }
 
     redirect(btn) {
@@ -74,6 +74,7 @@ export class RM extends Scene {
     }
 
     changeScene() {
+        this.events.emit('stopHand');
         this.scene.start('UI');
     }
 }

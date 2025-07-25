@@ -69,8 +69,6 @@ export class Tutorial extends Scene {
 
         this.handTween = this.tweens.add({
             targets: this.f_hand,
-            // x: { value: this.handTarget.x, duration, ease: 'Sine.easeInOut' },
-            // y: { value: this.handTarget.y, duration, ease: 'Sine.easeInOut' },
             alpha: a,
             duration: dur,
             delay: del,

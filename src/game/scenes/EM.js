@@ -1,9 +1,11 @@
 import { EventBus } from '../EventBus';
 import { Scene } from 'phaser';
+import { CTA } from '../prefabs/CTA'
 
 export class EM extends Scene {
     f_overlay;
-    f_btn; f_cta; f_ctaText;
+    f_modal; f_downloadBox; f_realClash; f_sweeps;
+    f_cta; f_emText;
 
     constructor() {
         super('EM');
@@ -15,21 +17,24 @@ export class EM extends Scene {
             this.cameras.main.centerY,
             this.cameras.main.width,
             this.cameras.main.height,
-            0xff0000,
+            0x000000, // Color (black)
             0.5 // Alpha (0 = transparent, 1 = opaque)
         );
 
-        this.f_btn = this.add.image(0, 0, 'debugBtn');
-        this.f_ctaText = this.add.text(0, 0, 'DOWNLOAD', {
-            fontFamily: 'Arial Black', fontSize: 20, color: '#ffffff',
-            stroke: '#000000', strokeThickness: 8,
+        this.f_downloadBox = this.add.image(0, 0, 'download_box');
+        this.f_realClash = this.add.image(0, -55, 'download_realcash');
+        this.f_sweeps = this.add.image(0, 85, 'download_sweeps');
+        this.f_emText = this.add.text(0, -150, 'DOWNLOAD FOR\nA CHANCE TO WIN', {
+            fontFamily: 'Arial Black', fontSize: 40, color: '#ffffff',
+            stroke: '#000000', strokeThickness: 1,
             align: 'center'
         }).setOrigin(0.5).setDepth(100);
 
-        this.f_cta = this.add.container(320, 719, [this.f_btn, this.f_ctaText]).setDepth(100);
+        this.f_cta = new CTA(this, 0, 250);
 
-        this.f_cta.setInteractive(this.f_btn.getBounds().setPosition(-this.f_btn.width / 2, -this.f_btn.height / 2), Phaser.Geom.Rectangle.Contains);
-        this.f_cta.on('pointerdown', () => this.redirect(this.f_cta));
+        // For readability
+        let arr = [this.f_downloadBox, this.f_realClash, this.f_sweeps, this.f_cta, this.f_emText];
+        this.f_modal = this.add.container(320, 569, arr).setDepth(100);
 
         EventBus.emit('current-scene-ready', this);
     }
