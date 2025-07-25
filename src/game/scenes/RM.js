@@ -16,6 +16,8 @@ export class RM extends Scene {
 
         this.f_bg = this.add.image(320, 569, 'background_portrait');
 
+        this.f_cta = new CTA(this, 0, 0);
+
         this.f_logo = this.add.image(320, 319, 'logo').setDepth(100);
         this.f_text = this.add.text(320, 539, 'REAL WINNERS!', {
             fontFamily: 'Arial Black', fontSize: 50, color: '#ffffff',
@@ -23,15 +25,25 @@ export class RM extends Scene {
             align: 'center'
         }).setOrigin(0.5).setDepth(100);
 
-        this.f_cta = new CTA(this, 0, 0);
-
         this.f_logo.setInteractive();
         this.f_logo.on('pointerdown', () => this.redirect());
 
-        this.f_coins = this.add.image(320, 1069, 'coins_rm');
+        this.f_coins = this.add.image(320, 1069, 'coins_rm').setDepth(100);
         this.f_radial = this.add.image(0, 0, 'radial').setScale(2).setAlpha(0.5);
+        this.f_radial.blendMode = 1;
 
-        this.f_wrapper = this.add.container(320, 719, [this.f_radial, this.f_cta]).setDepth(100);
+        this.f_wrapper = this.add.container(320, 719, [this.f_radial, this.f_cta]);
+
+        this.f_cta.loopArrows();
+        this.f_cta.setText('PLAY NOW');
+        this.f_cta.showSparkles();
+
+        this.tweens.add({
+            targets: this.f_radial,
+            angle: 359,
+            duration: 7000,
+            repeat: -1
+        });
 
         EventBus.emit('current-scene-ready', this);
 

@@ -33,13 +33,13 @@ export class List3D extends Phaser.GameObjects.Container {
 
     easySetup(enableInput = false) {
         this.hasSnap = false;
-        this.direction = 0;
-        this.minAlpha = this.minScale = 0.4;
+        this.direction = Math.PI/2;
+        this.minAlpha = this.minScale = 1;
         this.maxAlpha = this.maxScale = 1;
         this.damping = 250;
         this.hasInertia = true;
-        this.inertiaMultiplier = [0.5, 0.5];
-        this.inertiaDiminish = 200;
+        this.inertiaMultiplier = [2, 2];
+        this.inertiaDiminish = 1000;
         this.deadZone = 8;
 
         if(enableInput)
@@ -155,7 +155,8 @@ export class List3D extends Phaser.GameObjects.Container {
                 }
                 else {
                     wrapper.add(s);
-                    wrapper.key = s.key;
+                    wrapper.key = s.name;
+                    wrapper.name = s.name;
                 }
                 this.f_items.add(wrapper);
                 this.childArray.push(wrapper);
@@ -169,9 +170,9 @@ export class List3D extends Phaser.GameObjects.Container {
     };
 
     setupSignals() {
-        this.moveSignal = new Phaser.Signal();
-        this.haltSignal = new Phaser.Signal();
-        this.idleSignal = new Phaser.Signal();
+        // this.moveSignal = new Phaser.Signal();
+        // this.haltSignal = new Phaser.Signal();
+        // this.idleSignal = new Phaser.Signal();
     };
 
     setupCircle(direction, radius, radius2) {
@@ -192,8 +193,7 @@ export class List3D extends Phaser.GameObjects.Container {
     manualUpdate(time, dt) {
         this.lastClick = null;
         let move = { val: this.manualDistance.val * dt, k: this.manualDistance.k, theta: this.manualDistance.theta * dt };
-        if (this.hasInertia && this.inertiaTween == null) {
-            console.log('Inertia started', this.manualDistance);
+        if (this.hasInertia && this.inertiaTween === null) {
             this.inertiaTween = this.scene.tweens.add({
                 targets: this.manualDistance,
                 val: 0,
@@ -226,8 +226,9 @@ export class List3D extends Phaser.GameObjects.Container {
         let check = false;
 
         if (this.manualDistance !== null) {
+            // console.log("manualDist", this.manualDistance.val, move.val);
             move = this.manualUpdate(time, dt);
-            console.log('manualDistance move:', move);
+            // console.log("After Manual Update", this.manualDistance.val, move.val);
             check = true;
         }
 

@@ -52,7 +52,7 @@ export class CTA extends Phaser.GameObjects.Container {
             this.f_arrows.alpha = 1;
         } else {
             this.scene.tweens.add({
-                targets: [this.f_fx, this.f_greeen, this.f_arrows],
+                targets: [this.f_fx, this.f_green, this.f_arrows],
                 alpha: 1,
                 duration: 150,
             })
@@ -82,7 +82,7 @@ export class CTA extends Phaser.GameObjects.Container {
                 })
             }
             this.scene.tweens.add({
-                targets: [this.f_fx, this.f_greeen, this.f_arrows],
+                targets: [this.f_fx, this.f_green, this.f_arrows],
                 alpha: 0,
                 duration: 150,
                 delay: del

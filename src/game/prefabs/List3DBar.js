@@ -8,8 +8,8 @@ export class List3DBar extends List3D {
     }
 
     easySetup(enabledInput) {
-        this.radius = 200;
-        this.radius2 = 200;
+        this.radius = 575;
+        this.radius2 = 700;
         // Call the parent method to complete setup
         super.easySetup(enabledInput);
     }
@@ -48,7 +48,7 @@ export class List3DBar extends List3D {
     * tweens the delta to place the closest item to the front
     */
     snapFront() {
-        let deltaDist = 0, obj;
+        let deltaDist = 0; let obj;
         let res = Math.min.apply(Math, this.childArray.map(i => {
             return i.state === STATENUMS.ACTIVE ? Math.abs(i.delta) : 10000;
         }));
@@ -59,39 +59,49 @@ export class List3DBar extends List3D {
     }
 
     toFront(item, speed) {
+        console.log(item, speed)
         if (this.toFrontTween) {
             this.toFrontTween.stop();
             this.toFrontTween = null;
         }
         let tempInput = this.inputIsEnabled;
         this.stopMovement();
-        let deltaDist = -item.delta;
 
-        item.temp = 0; let temp = 0;
-        item.snapTween = this.game.add.tween(item).to({ temp: 1 }, speed, 'Back', true, 0);
-        item.snapTween.onUpdateCallback(function () {
-            this.f_items.forEach(i => {
-                i.delta += (item.temp - temp) * deltaDist;
-                if (i.delta >= 1) i.delta -= 2;
-                else if (i.delta <= -1) i.delta += 2;
-            }, this);
-            temp = item.temp;
-        }, this);
-        item.snapTween.onComplete.add(function () {
-            this.f_items.forEach(i => {
-                i.delta += (item.temp - temp) * deltaDist;
-                if (i.delta >= 1) i.delta -= 2;
-                else if (i.delta <= -1) i.delta += 2;
-            }, this);
-            temp = item.temp;
-        }, this);
+        const deltaDist = -item.delta;
+        item.temp = 0;
+        let temp = 0;
 
-        if (tempInput)
-            this.game.time.events.add(speed + 50, function () {
+        item.snapTween = this.scene.tweens.add({
+            targets: item,
+            temp: 1,
+            ease: 'Back',
+            duration: speed,
+            onUpdate: () => {
+                this.f_items.each(i => {
+                    i.delta += (item.temp - temp) * deltaDist;
+                    if (i.delta >= 1) i.delta -= 2;
+                    else if (i.delta <= -1) i.delta += 2;
+                });
+                temp = item.temp;
+            },
+            onComplete: () => {
+                this.f_items.each(i => {
+                    i.delta += (item.temp - temp) * deltaDist;
+                    if (i.delta >= 1) i.delta -= 2;
+                    else if (i.delta <= -1) i.delta += 2;
+                });
+                temp = item.temp;
+            }
+        });
+
+        if (tempInput) {
+            this.time.delayedCall(speed + 50, () => {
                 this.enableInput();
-            }, this);
+            });
+        }
 
         this.toFrontTween = item.snapTween;
+
     }
 
     insert(image, pos, isDelta) {
@@ -143,9 +153,11 @@ export class List3DBar extends List3D {
     }
 
     updateData(move) {
-        if(move == null) return;
+        if (move == null) return;
         let val = move.val;
         let max = this.childArray.length / 2;
+
+        // console.log(val)
 
         for (let i = 0; i < this.childArray.length; ++i) {
             this.childArray[i].delta += (val / this.damping / max);

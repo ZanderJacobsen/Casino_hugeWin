@@ -36,6 +36,24 @@ export class EM extends Scene {
         let arr = [this.f_downloadBox, this.f_realClash, this.f_sweeps, this.f_cta, this.f_emText];
         this.f_modal = this.add.container(320, 569, arr).setDepth(100);
 
+        this.f_cta.loopArrows();
+        this.f_cta.setText('DOWNLOAD');
+
+        this.time.delayedCall(500, () => {
+            this.inputEnabled = true;
+
+            // Add a one-time pointer down listener
+            this.input.once('pointerdown', () => {
+                if (this.inputEnabled) {
+                    this.redirect();
+                    this.scene.stop('UI');
+                    this.scene.stop('Game');
+                    this.scene.start('RM'); // Replace with your actual scene key
+                }
+            });
+        });
+
+        this.cameras.main.fadeIn(500, 0, 0, 0);
         EventBus.emit('current-scene-ready', this);
     }
 

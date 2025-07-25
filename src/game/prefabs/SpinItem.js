@@ -76,8 +76,8 @@ export class SpinItem extends Phaser.GameObjects.Container {
 
   setup(name) {
     this.name = name;
-    this.f_item.setFrame('slots_' + name);
-    this.f_blur.setFrame('slots_' + name + '_blur');
+    this.f_item.setTexture('slots_' + name);
+    this.f_blur.setTexture('slots_' + name + '_blur');
   }
 
   selected(sp, dl, yo) {

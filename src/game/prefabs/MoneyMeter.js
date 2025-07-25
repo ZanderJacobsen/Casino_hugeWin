@@ -49,9 +49,9 @@ export class MoneyMeter extends Phaser.GameObjects.Container {
     this.num = Math.round(this.num * 100) / 100;
     if (this.num > 10000) this.num = 10000;
 
-    this.tweens.killTweensOf([this.f_text, this.f_coin]);
+    this.scene.tweens.killTweensOf([this.f_text, this.f_coin]);
 
-    this.tweens.add({
+    this.scene.tweens.add({
       targets: this,
       textNum: this.num,
       duration: 100,
@@ -68,7 +68,7 @@ export class MoneyMeter extends Phaser.GameObjects.Container {
 
     this.f_coin.scale = 1;
 
-    this.tweens.add({
+    this.scene.tweens.add({
       targets: this.f_coin,
       scale: '+=.1',
       duration: 100,
