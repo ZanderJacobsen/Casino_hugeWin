@@ -1,0 +1,431 @@
+{
+  "files": [
+    {
+      "type": "image",
+      "key": "background_portrait",
+      "url": "assets/01_Art/background_portrait.jpg"
+    },
+    {
+      "type": "image",
+      "key": "bg_landscape",
+      "url": "assets/01_Art/bg_landscape.jpg"
+    },
+    {
+      "type": "image",
+      "key": "coins_rm",
+      "url": "assets/01_Art/coins_rm.png"
+    },
+    {
+      "type": "image",
+      "key": "coin_1",
+      "url": "assets/01_Art/coin_1.png"
+    },
+    {
+      "type": "image",
+      "key": "coin_2",
+      "url": "assets/01_Art/coin_2.png"
+    },
+    {
+      "type": "image",
+      "key": "coin_3",
+      "url": "assets/01_Art/coin_3.png"
+    },
+    {
+      "type": "image",
+      "key": "moneypile_landscape",
+      "url": "assets/01_Art/moneypile_landscape.png"
+    },
+    {
+      "type": "image",
+      "key": "moneypile_portrait",
+      "url": "assets/01_Art/moneypile_portrait.png"
+    },
+    {
+      "type": "atlas",
+      "key": "Pink_Rectangle",
+      "textureURL": "assets/01_Art/slots/Atlas/Pink_Rectangle.png",
+      "atlasURL": "assets/01_Art/slots/Atlas/Pink_Rectangle.json"
+    },
+    {
+      "type": "atlas",
+      "key": "Pink_Square",
+      "textureURL": "assets/01_Art/slots/Atlas/Pink_Square.png",
+      "atlasURL": "assets/01_Art/slots/Atlas/Pink_Square.json"
+    },
+    {
+      "type": "image",
+      "key": "slots_10_blur",
+      "url": "assets/01_Art/slots/blur/slots_10_blur.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_9_blur",
+      "url": "assets/01_Art/slots/blur/slots_9_blur.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_a_blur",
+      "url": "assets/01_Art/slots/blur/slots_a_blur.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_bell_blur",
+      "url": "assets/01_Art/slots/blur/slots_bell_blur.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_bonus_blur",
+      "url": "assets/01_Art/slots/blur/slots_bonus_blur.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_cherry_blur",
+      "url": "assets/01_Art/slots/blur/slots_cherry_blur.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_j_blur",
+      "url": "assets/01_Art/slots/blur/slots_j_blur.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_k_blur",
+      "url": "assets/01_Art/slots/blur/slots_k_blur.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_lemon_blur",
+      "url": "assets/01_Art/slots/blur/slots_lemon_blur.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_orange_blur",
+      "url": "assets/01_Art/slots/blur/slots_orange_blur.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_q_blur",
+      "url": "assets/01_Art/slots/blur/slots_q_blur.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_watermelon_blur",
+      "url": "assets/01_Art/slots/blur/slots_watermelon_blur.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_wild_blur",
+      "url": "assets/01_Art/slots/blur/slots_wild_blur.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_10",
+      "url": "assets/01_Art/slots/slots_10.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_9",
+      "url": "assets/01_Art/slots/slots_9.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_a",
+      "url": "assets/01_Art/slots/slots_a.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_bell",
+      "url": "assets/01_Art/slots/slots_bell.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_blank",
+      "url": "assets/01_Art/slots/slots_blank.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_bonus",
+      "url": "assets/01_Art/slots/slots_bonus.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_border",
+      "url": "assets/01_Art/slots/slots_border.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_cherry",
+      "url": "assets/01_Art/slots/slots_cherry.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_darken",
+      "url": "assets/01_Art/slots/slots_darken.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_j",
+      "url": "assets/01_Art/slots/slots_j.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_k",
+      "url": "assets/01_Art/slots/slots_k.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_lemon",
+      "url": "assets/01_Art/slots/slots_lemon.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_orange",
+      "url": "assets/01_Art/slots/slots_orange.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_q",
+      "url": "assets/01_Art/slots/slots_q.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_watermelon",
+      "url": "assets/01_Art/slots/slots_watermelon.png"
+    },
+    {
+      "type": "image",
+      "key": "slots_wild",
+      "url": "assets/01_Art/slots/slots_wild.png"
+    },
+    {
+      "type": "image",
+      "key": "slot_highlight_1",
+      "url": "assets/01_Art/slots/slot_highlight_1.png"
+    },
+    {
+      "type": "image",
+      "key": "slot_highlight_2",
+      "url": "assets/01_Art/slots/slot_highlight_2.png"
+    },
+    {
+      "type": "image",
+      "key": "attaboy_1",
+      "url": "assets/01_Art/ui/attaboy_1.png"
+    },
+    {
+      "type": "image",
+      "key": "attaboy_2",
+      "url": "assets/01_Art/ui/attaboy_2.png"
+    },
+    {
+      "type": "image",
+      "key": "button_spin_gray",
+      "url": "assets/01_Art/ui/button_spin_gray.png"
+    },
+    {
+      "type": "image",
+      "key": "button_spin_green",
+      "url": "assets/01_Art/ui/button_spin_green.png"
+    },
+    {
+      "type": "image",
+      "key": "download_box",
+      "url": "assets/01_Art/ui/download_box.png"
+    },
+    {
+      "type": "image",
+      "key": "download_realcash",
+      "url": "assets/01_Art/ui/download_realcash.png"
+    },
+    {
+      "type": "image",
+      "key": "download_sweeps",
+      "url": "assets/01_Art/ui/download_sweeps.png"
+    },
+    {
+      "type": "image",
+      "key": "logo_gameplay",
+      "url": "assets/01_Art/ui/logo_gameplay.png"
+    },
+    {
+      "type": "image",
+      "key": "logo_gameplay_stars",
+      "url": "assets/01_Art/ui/logo_gameplay_stars.png"
+    },
+    {
+      "type": "image",
+      "key": "logo_rm",
+      "url": "assets/01_Art/ui/logo_rm.png"
+    },
+    {
+      "type": "image",
+      "key": "moneymeter_box",
+      "url": "assets/01_Art/ui/moneymeter_box.png"
+    },
+    {
+      "type": "image",
+      "key": "moneymeter_coin",
+      "url": "assets/01_Art/ui/moneymeter_coin.png"
+    },
+    {
+      "type": "image",
+      "key": "particle_1",
+      "url": "assets/01_Art/ui/particle_1.png"
+    },
+    {
+      "type": "image",
+      "key": "particle_2",
+      "url": "assets/01_Art/ui/particle_2.png"
+    },
+    {
+      "type": "image",
+      "key": "particle_3",
+      "url": "assets/01_Art/ui/particle_3.png"
+    },
+    {
+      "type": "image",
+      "key": "radial",
+      "url": "assets/01_Art/ui/radial.png"
+    },
+    {
+      "type": "image",
+      "key": "spin_arrow",
+      "url": "assets/01_Art/ui/spin_arrow.png"
+    },
+    {
+      "type": "image",
+      "key": "zoe_celebrate",
+      "url": "assets/01_Art/zoe/zoe_celebrate.png"
+    },
+    {
+      "type": "image",
+      "key": "zoe_default",
+      "url": "assets/01_Art/zoe/zoe_default.png"
+    },
+    {
+      "type": "image",
+      "key": "zoe_money_1",
+      "url": "assets/01_Art/zoe/zoe_money_1.png"
+    },
+    {
+      "type": "image",
+      "key": "zoe_money_2",
+      "url": "assets/01_Art/zoe/zoe_money_2.png"
+    },
+    {
+      "type": "audio",
+      "key": "BGM",
+      "url": "assets/03_Audio/BGM.mp3"
+    },
+    {
+      "type": "audio",
+      "key": "coin",
+      "url": "assets/03_Audio/coin.mp3"
+    },
+    {
+      "type": "audio",
+      "key": "column_win",
+      "url": "assets/03_Audio/column_win.mp3"
+    },
+    {
+      "type": "audio",
+      "key": "payout",
+      "url": "assets/03_Audio/payout.mp3"
+    },
+    {
+      "type": "audio",
+      "key": "slot_spin",
+      "url": "assets/03_Audio/slot_spin.mp3"
+    },
+    {
+      "type": "audio",
+      "key": "slot_stop_1",
+      "url": "assets/03_Audio/slot_stop_1.mp3"
+    },
+    {
+      "type": "audio",
+      "key": "slot_stop_2",
+      "url": "assets/03_Audio/slot_stop_2.mp3"
+    },
+    {
+      "type": "audio",
+      "key": "slot_stop_3",
+      "url": "assets/03_Audio/slot_stop_3.mp3"
+    },
+    {
+      "type": "audio",
+      "key": "slot_stop_4",
+      "url": "assets/03_Audio/slot_stop_4.mp3"
+    },
+    {
+      "type": "audio",
+      "key": "slot_stop_5",
+      "url": "assets/03_Audio/slot_stop_5.mp3"
+    },
+    {
+      "type": "audio",
+      "key": "tap",
+      "url": "assets/03_Audio/tap.mp3"
+    },
+    {
+      "type": "audio",
+      "key": "Win 1",
+      "url": "assets/03_Audio/Win 1.mp3"
+    },
+    {
+      "type": "audio",
+      "key": "Win 2",
+      "url": "assets/03_Audio/Win 2.mp3"
+    },
+    {
+      "type": "audio",
+      "key": "Win 3",
+      "url": "assets/03_Audio/Win 3.mp3"
+    },
+    {
+      "type": "audio",
+      "key": "zoe_amazing",
+      "url": "assets/03_Audio/zoe_amazing.mp3"
+    },
+    {
+      "type": "audio",
+      "key": "zoe_wow",
+      "url": "assets/03_Audio/zoe_wow.mp3"
+    },
+    {
+      "type": "audio",
+      "key": "zoe_yay",
+      "url": "assets/03_Audio/zoe_yay.mp3"
+    },
+    {
+      "type": "image",
+      "key": "bg",
+      "url": "assets/BaseTemplate/bg.png"
+    },
+    {
+      "type": "image",
+      "key": "CTA",
+      "url": "assets/BaseTemplate/CTA.png"
+    },
+    {
+      "type": "image",
+      "key": "debugBtn",
+      "url": "assets/BaseTemplate/debugBtn.png"
+    },
+    {
+      "type": "image",
+      "key": "favicon",
+      "url": "assets/BaseTemplate/favicon.png"
+    },
+    {
+      "type": "image",
+      "key": "logo",
+      "url": "assets/BaseTemplate/logo.png"
+    },
+    {
+      "type": "image",
+      "key": "star",
+      "url": "assets/BaseTemplate/star.png"
+    }
+  ]
+}
