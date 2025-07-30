@@ -1,72 +1,51 @@
-# Phaser Playable Ad Template
+# Casino_freqWin (Phaser 3)
 
-This is a boilerplate project I created to streamline development of interactive **playable mobile ads**, the kind I designed while working at **AppLovin**. Each ad follows a standardized, proven flow built for performance, clarity, and user engagement within a short, tappable experience.
+This project is a small interactive casino-style experience built in **Phaser 3**, recreated from an original **Phaser 2 playable ad**. It served as an early step in modernizing legacy Phaser 2 content and exploring Phaser 3’s updated rendering, tweening, and input handling systems.
 
----
+The gameplay is intentionally simple: it's a one-click “pull-to-win” experience that demonstrates animation timing, visual feedback, and basic state transitions—just like a playable ad would.
 
-## 🧠 Why This Exists
-
-Playable ads require fast iteration and strong structure — so I built this template to:
-- 💡 **Speed up** the process of prototyping new ideas
-- 🔁 **Enforce consistent architecture** across projects
-- 🧱 Provide a **solid foundation** of UI flow and game scaffolding
-- 🧪 Showcase how I transform this boilerplate into engaging, interactive playables
+[Live Demo → Play it here](https://zanderjacobsen.github.io/Casino_hugeWin/)
 
 ---
 
-## 🎮 Structure and Flow
+## Purpose
 
-Each project built from this template follows a typical playable ad flow:
+This was built as part of an ongoing effort to **rebuild and modernize** a set of Phaser 2 projects originally created for mobile ad formats. It's a technical exercise in:
 
-1. **UI Scene** – splash visuals, CTA, start button
-2. **Game Scene** – short, engaging mechanic or tap-based interaction
-3. **Win/Lose Modal** – feedback and progression
-4. **Return Modal** – shown after user returns from the App Store
-
-These stages are easily swappable and extendable with your own assets and ideas.
+- Migrating from Phaser 2 to Phaser 3
+- Rewriting legacy scene structures into modular formats
+- Improving animation and easing control
+- Creating easily deployable, self-contained HTML5 builds
 
 ---
 
-## 🛠️ Tech Stack
+## Features
 
-- **Phaser 3** (modernized – this template uses the latest versions, unlike the deprecated setup I previously worked with)
-- **React** – used as the container layer for asset delivery and integration
-- **JavaScript** throughout
-
----
-
-## 📣 A Note to Reviewers and Hiring Managers
-
-If you’re reviewing this as part of my portfolio:  
-🔍 This repo is **not a finished product** — it’s the reusable starting point from which I build short-form interactive ads.
-
-👉 Please check out some of my other public projects to see **fully built playables** derived from this template.  
-This boilerplate serves to demonstrate how I organize projects, set up pipelines, and think through scalable ad production workflows.
+- Single-click interaction flow (designed like a playable ad)
+- Visual feedback through tweens, movement, and scale animations
+- Sound integration for interaction cues
+- Tight scene structure and timing loops
+- Full Phaser 3 rewrite from an original Phaser 2 version
 
 ---
 
-## 📱 Mobile-First Focus
+## Skills Demonstrated
 
-- The root container is automatically resized to simulate a **mobile screen ratio**, emulating typical playable ad dimensions
-- Future versions may support **device rotation**
-
----
-
-## 🚀 How I Use This
-
-Whenever I begin a new ad concept:
-1. I copy this template
-2. Swap out placeholder assets
-3. Flesh out the flow (entry > game > feedback > return)
-4. Add the core gameplay mechanic last
-
-This consistent pipeline allows me to test more ideas faster while maintaining a clean UX and codebase.
+- Practical game dev pipeline from legacy tech to modern JS frameworks
+- Scene timing and animation sequencing
+- Minimalist interaction design (ad-inspired UX)
+- Lightweight asset and performance-conscious code structure
+- HTML5 deployment and GitHub Pages integration
 
 ---
 
-## ⚠️ Setup Instructions Coming Soon
+## How to Run
 
-I'll be adding a quick start section with instructions on how to run a project based on this template.
+To run the project locally:
 
----
+1. Clone this repository  
+2. From the root folder, launch a local server:
+3. Open the URL in your browser (typically http://localhost:8080)
 
+Or, just play it online here:
+https://zanderjacobsen.github.io/Casino_hugeWin/
